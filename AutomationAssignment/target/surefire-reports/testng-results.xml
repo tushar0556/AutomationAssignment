@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="76679" started-at="2018-07-02T06:40:59Z" finished-at="2018-07-02T06:42:16Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="76679" started-at="2018-07-02T06:40:59Z" finished-at="2018-07-02T06:42:16Z">
+      <class name="org.automation.assignment.testcases.TC_002_RegistrationFunction">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_002_RegistrationFunction@3796751b]" name="startBrowser" is-config="true" duration-ms="10504" started-at="2018-07-02T12:11:41Z" finished-at="2018-07-02T12:11:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="tc_002_registration_functionality(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.automation.assignment.testcases.TC_002_RegistrationFunction@3796751b]" name="tc_002_registration_functionality" duration-ms="6899" started-at="2018-07-02T12:11:52Z" data-provider="Excel" finished-at="2018-07-02T12:11:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tknaik17]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tknaik@17]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[tknaik@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[tk]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[tkn]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_002_registration_functionality -->
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_002_RegistrationFunction@3796751b]" name="startBrowser" is-config="true" duration-ms="12147" started-at="2018-07-02T12:11:59Z" finished-at="2018-07-02T12:12:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_002_RegistrationFunction@3796751b]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-07-02T12:11:59Z" finished-at="2018-07-02T12:11:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="tc_002_registration_functionality(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.automation.assignment.testcases.TC_002_RegistrationFunction@3796751b]" name="tc_002_registration_functionality" duration-ms="5194" started-at="2018-07-02T12:12:11Z" data-provider="Excel" finished-at="2018-07-02T12:12:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tknaik178]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tknaik17]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[tknaik17@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[tknaikhh]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[abc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_002_registration_functionality -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_002_RegistrationFunction@3796751b]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-07-02T12:12:16Z" finished-at="2018-07-02T12:12:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- org.automation.assignment.testcases.TC_002_RegistrationFunction -->
+      <class name="org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality@96532d6]" name="startBrowser" is-config="true" duration-ms="17332" started-at="2018-07-02T12:11:00Z" finished-at="2018-07-02T12:11:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="tc_001_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality@96532d6]" name="tc_001_login_functionality" duration-ms="6123" started-at="2018-07-02T12:11:17Z" data-provider="Excel" finished-at="2018-07-02T12:11:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tusharnaik]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tusharnaik17]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_001_login_functionality -->
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality@96532d6]" name="startBrowser" is-config="true" duration-ms="11716" started-at="2018-07-02T12:11:23Z" finished-at="2018-07-02T12:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality@96532d6]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-07-02T12:11:23Z" finished-at="2018-07-02T12:11:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="tc_001_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality@96532d6]" name="tc_001_login_functionality" duration-ms="6328" started-at="2018-07-02T12:11:35Z" data-provider="Excel" finished-at="2018-07-02T12:11:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tknaik178]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tknaik17]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_001_login_functionality -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality@96532d6]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-07-02T12:11:41Z" finished-at="2018-07-02T12:11:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

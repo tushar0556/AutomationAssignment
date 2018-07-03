@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\Tushar\Sample\AutomationAssignment\testng.xml</span>
+                    <span>C:\Users\Tushar\git\AutomationAssignment\AutomationAssignment\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.automation.assignment.testcases.TC_002_RegistrationFunction" hash-for-method="tc_002_registration_functionality(tknaik178, tknaik17, tknaik17@gmail.com, tknaikhh, abc)">tc_002_registration_functionality(tknaik178, tknaik17, tknaik17@gmail.com, tknaikhh, abc)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.automation.assignment.testcases.TC_002_RegistrationFunction" hash-for-method="tc_002_registration_functionality(tknaik17, tknaik@17, tknaik@gmail.com, tk, tkn)">tc_002_registration_functionality(tknaik17, tknaik@17, tknaik@gmail.com, tk, tkn)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -110,16 +129,6 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality" hash-for-method="tc_001_login_functionality(tknaik178, tknaik17)">tc_001_login_functionality(tknaik178, tknaik17)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.automation.assignment.testcases.TC_002_RegistrationFunction" hash-for-method="tc_002_registration_functionality(tknaik178, tknaik17, tknaik17@gmail.com, tknaikhh, abc)">tc_002_registration_functionality(tknaik178, tknaik17, tknaik17@gmail.com, tknaikhh, abc)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.automation.assignment.testcases.TC_002_RegistrationFunction" hash-for-method="tc_002_registration_functionality(tknaik17, tknaik@17, tknaik@gmail.com, tk, tkn)">tc_002_registration_functionality(tknaik17, tknaik@17, tknaik@gmail.com, tk, tkn)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -132,9 +141,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">org.automation.assignment.testcases.TC_002_RegistrationFunction</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -144,6 +153,11 @@
                   </a> <!-- tc_002_registration_functionality(tknaik178, tknaik17, tknaik17@gmail.com, tknaikhh, abc) -->
                   <span class="method-name">tc_002_registration_functionality</span>
                   <span class="parameters">(tknaik178, tknaik17, tknaik17@gmail.com, tknaikhh, abc)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Registration Unsuccessful... expected [https://www.surveymonkey.com/profile/default/?joined=1] but found [https://www.surveymonkey.com/user/sign-up/]
+	at org.automation.assignment.pages.RegistrationPage.clickCreateAccount(RegistrationPage.java:85)
+	at org.automation.assignment.testcases.TC_002_RegistrationFunction.tc_002_registration_functionality(TC_002_RegistrationFunction.java:23)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -152,10 +166,15 @@
                   </a> <!-- tc_002_registration_functionality(tknaik17, tknaik@17, tknaik@gmail.com, tk, tkn) -->
                   <span class="method-name">tc_002_registration_functionality</span>
                   <span class="parameters">(tknaik17, tknaik@17, tknaik@gmail.com, tk, tkn)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Registration Unsuccessful... expected [https://www.surveymonkey.com/profile/default/?joined=1] but found [https://www.surveymonkey.com/user/sign-up/]
+	at org.automation.assignment.pages.RegistrationPage.clickCreateAccount(RegistrationPage.java:85)
+	at org.automation.assignment.testcases.TC_002_RegistrationFunction.tc_002_registration_functionality(TC_002_RegistrationFunction.java:23)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -183,7 +202,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Tushar\Sample\AutomationAssignment\testng.xml</span>
+            <span class="header-content">C:\Users\Tushar\git\AutomationAssignment\AutomationAssignment\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -237,19 +256,19 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'tc_002_registration_functionality')
 data.setCell(0, 2, 'org.automation.assignment.testcases.TC_002_RegistrationFunction')
-data.setCell(0, 3, 6899);
+data.setCell(0, 3, 6804);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'tc_001_login_functionality')
-data.setCell(1, 2, 'org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality')
-data.setCell(1, 3, 6328);
+data.setCell(1, 1, 'tc_002_registration_functionality')
+data.setCell(1, 2, 'org.automation.assignment.testcases.TC_002_RegistrationFunction')
+data.setCell(1, 3, 6722);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'tc_001_login_functionality')
 data.setCell(2, 2, 'org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality')
-data.setCell(2, 3, 6123);
+data.setCell(2, 3, 5760);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'tc_002_registration_functionality')
-data.setCell(3, 2, 'org.automation.assignment.testcases.TC_002_RegistrationFunction')
-data.setCell(3, 3, 5194);
+data.setCell(3, 1, 'tc_001_login_functionality')
+data.setCell(3, 2, 'org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality')
+data.setCell(3, 3, 5018);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -287,50 +306,54 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">tc_001_login_functionality(tusharnaik, tusharnaik17)</span>
-                <span class="method-start">17332 ms</span>
+                <span class="method-start">16053 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">23455 ms</span>
+                <span class="method-start">21814 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startBrowser</span>
-                <span class="method-start">23455 ms</span>
+                <span class="method-start">22365 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">tc_001_login_functionality(tknaik178, tknaik17)</span>
-                <span class="method-start">35171 ms</span>
+                <span class="method-start">33393 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">41499 ms</span>
+                <span class="method-start">38411 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.automation.assignment.testcases.TC_002_RegistrationFunction</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startBrowser</span>
-                <span class="method-start">41544 ms</span>
+                <span class="method-start">39002 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">tc_002_registration_functionality(tknaik17, tknaik@17, tknaik@gmail.com, tk, tkn)</span>
-                <span class="method-start">52048 ms</span>
+                <span class="method-start">49888 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">58948 ms</span>
+                <span class="method-start">56623 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startBrowser</span>
-                <span class="method-start">58948 ms</span>
+                <span class="method-start">57167 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">tc_002_registration_functionality(tknaik178, tknaik17, tknaik17@gmail.com, tknaikhh, abc)</span>
-                <span class="method-start">71095 ms</span>
+                <span class="method-start">68125 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">76289 ms</span>
+                <span class="method-start">74930 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

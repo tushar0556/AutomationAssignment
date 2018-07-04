@@ -8,8 +8,9 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.automation.assignment.base.InstantiateDriver;
-import org.automation.assignment.utility.Utilty;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 
@@ -21,57 +22,44 @@ import org.testng.annotations.DataProvider;
  */
 public class LoginPage extends InstantiateDriver {
 
+	@FindBy(id = "username")
+	static WebElement usernameTextbox;
+	@FindBy(id = "password")
+	static WebElement passwordTextbox;
+	@FindBy(xpath = "//button[@type='submit']")
+	static WebElement signInButton;
+
 	private XSSFWorkbook workbook;
-	/*
-	 * public static WebDriver driver = InstantiateDriver.driver;
-	 * 
-	 * public LoginPage(WebDriver driver) { this.driver = driver; }
-	 */
 
 	public static void enterUserName(String name) {
-		try {
-			InstantiateDriver.driver.findElement(By.id(Utilty.fetchElementLocatorValue("login_username_id"))).sendKeys(name);;
-		} catch (IOException e) {
-			System.err.println("Error while entering Username"+e);
-			e.printStackTrace();
-		}
+		usernameTextbox.sendKeys(name);
 	}
 
 	public static void enterPassword(String password) {
-		try {
-			InstantiateDriver.driver.findElement(By.id(Utilty.fetchElementLocatorValue("login_password_id")))
-					.sendKeys(password);
-		} catch (IOException e) {
-			System.err.println("Error while entering Password"+e);
-			e.printStackTrace();
-		}
+		passwordTextbox.sendKeys(password);
 	}
 
 	public static void clickSignin() {
-		try {
-			InstantiateDriver.driver.findElement(By.xpath(Utilty.fetchElementLocatorValue("login_signin_xpath"))).click();
-		} catch (IOException e) {
-			System.err.println("Error while signing in"+e);
-			e.printStackTrace();
-		}
+		signInButton.click();
 		Assert.assertEquals(InstantiateDriver.driver.getCurrentUrl(), "https://www.surveymonkey.com/dashboard/",
 				"Login Unsuccessful, Please check credentials...");
 	}
-	
+
 	public static void checkexistance() {
-		Assert.assertEquals(InstantiateDriver.driver.getCurrentUrl(),"https://www.surveymonkey.com/", "Check Url..");
+		Assert.assertEquals(InstantiateDriver.driver.getCurrentUrl(), "https://www.surveymonkey.com/", "Check Url..");
 
 		// Checked whether sign in button exist and enable or not
-		
-		boolean signIn = InstantiateDriver.driver.findElement(By.xpath("//a[@href='https://www.surveymonkey.com/user/sign-in/']"))
-				.isEnabled();
+
+		boolean signIn = InstantiateDriver.driver
+				.findElement(By.xpath("//a[@href='https://www.surveymonkey.com/user/sign-in/']")).isEnabled();
 		if (signIn) {
-			InstantiateDriver.driver.findElement(By.xpath("//a[@href='https://www.surveymonkey.com/user/sign-in/']")).click();
+			InstantiateDriver.driver.findElement(By.xpath("//a[@href='https://www.surveymonkey.com/user/sign-in/']"))
+					.click();
 		}
-		Assert.assertEquals(InstantiateDriver.driver.getCurrentUrl(),"https://www.surveymonkey.com/user/sign-in/",
+		Assert.assertEquals(InstantiateDriver.driver.getCurrentUrl(), "https://www.surveymonkey.com/user/sign-in/",
 				"Check Sign in Url..");
 	}
-	
+
 	/**
 	 * Read data that is username and password from excel file to provide to
 	 * test case Update test case with data driven : dynamic data from excel

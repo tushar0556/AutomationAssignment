@@ -8,8 +8,9 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.automation.assignment.base.InstantiateDriver;
-import org.automation.assignment.utility.Utilty;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 
@@ -21,67 +22,43 @@ import org.testng.annotations.DataProvider;
  */
 public class RegistrationPage extends InstantiateDriver {
 
+	@FindBy(id = "username")
+	static WebElement usernameTextbox;
+	@FindBy(id = "password")
+	static WebElement passwordTextbox;
+	@FindBy(id = "email")
+	static WebElement emailTextbox;
+	@FindBy(id = "first_name")
+	static WebElement firstNameTextbox;
+	@FindBy(id = "last_name")
+	static WebElement lastNameTextbox;
+	@FindBy(xpath = "//button[@id='submitform']")
+	static WebElement createAccountButton;
+
 	private XSSFWorkbook workbook;
 
 	public static void enterUserName(String name) {
-		try {
-			InstantiateDriver.driver.findElement(By.id(Utilty.fetchElementLocatorValue("registration_username_id")))
-					.sendKeys(name);
-		} catch (IOException e) {
-			System.err.println("Error while entering Username for registration" + e);
-			e.printStackTrace();
-		}
+		usernameTextbox.sendKeys(name);
 	}
 
 	public static void enterPassword(String password) {
-		try {
-			InstantiateDriver.driver.findElement(By.id(Utilty.fetchElementLocatorValue("registration_password_id")))
-					.sendKeys(password);
-		} catch (IOException e) {
-			System.err.println("Error while entering password for registraion" + e);
-			e.printStackTrace();
-		}
+		passwordTextbox.sendKeys(password);
 	}
 
 	public static void enterEmail(String email) {
-		try {
-			InstantiateDriver.driver.findElement(By.id(Utilty.fetchElementLocatorValue("registration_email_id")))
-					.sendKeys(email);
-		} catch (IOException e) {
-			System.err.println("Error for Registraion while entering email" + e);
-			e.printStackTrace();
-		}
+		emailTextbox.sendKeys(email);
 	}
 
 	public static void enterFirstName(String fname) {
-		try {
-			InstantiateDriver.driver.findElement(By.id(Utilty.fetchElementLocatorValue("registration_first_name_id")))
-					.sendKeys(fname);
-		} catch (IOException e) {
-			System.err.println("Error for Registraion while entering first name" + e);
-			e.printStackTrace();
-		}
+		firstNameTextbox.sendKeys(fname);
 	}
 
 	public static void enterLastName(String lname) {
-		try {
-			InstantiateDriver.driver.findElement(By.id(Utilty.fetchElementLocatorValue("registration_last_name_id")))
-					.sendKeys(lname);
-		} catch (IOException e) {
-			System.err.println("Error for Registraion while entering last name" + e);
-			e.printStackTrace();
-		}
+		lastNameTextbox.sendKeys(lname);
 	}
 
 	public static void clickCreateAccount() {
-		try {
-			InstantiateDriver.driver
-					.findElement(By.xpath(Utilty.fetchElementLocatorValue("registration_create_account_xpath")))
-					.click();
-		} catch (IOException e) {
-			System.err.println("Error for Registraion" + e);
-			e.printStackTrace();
-		}
+		createAccountButton.click();
 		Assert.assertEquals(InstantiateDriver.driver.getCurrentUrl(),
 				"https://www.surveymonkey.com/profile/default/?joined=1", "Registration Unsuccessful...");
 	}
@@ -89,12 +66,12 @@ public class RegistrationPage extends InstantiateDriver {
 	public static void checkSignUpButton() {
 		boolean signUp = InstantiateDriver.driver
 				.findElement(By.xpath("//a[@href='https://www.surveymonkey.com/user/sign-up/']")).isEnabled();
-		
+
 		if (signUp) {
 			InstantiateDriver.driver.findElement(By.xpath("//a[@href='https://www.surveymonkey.com/user/sign-up/']"))
 					.click();
 		}
-		
+
 		Assert.assertEquals(InstantiateDriver.driver.getCurrentUrl(), "https://www.surveymonkey.com/user/sign-up/",
 				"Sign Up button not exists..");
 

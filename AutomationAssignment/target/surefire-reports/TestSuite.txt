@@ -1,12 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 76.191 sec <<< FAILURE! - in TestSuite
-tc_002_registration_functionality(org.automation.assignment.testcases.TC_002_RegistrationFunction)  Time elapsed: 6.735 sec  <<< FAILURE!
-java.lang.AssertionError: Registration Unsuccessful... expected [https://www.surveymonkey.com/profile/default/?joined=1] but found [https://www.surveymonkey.com/user/sign-up/]
-	at org.automation.assignment.testcases.TC_002_RegistrationFunction.tc_002_registration_functionality(TC_002_RegistrationFunction.java:23)
-
-tc_002_registration_functionality(org.automation.assignment.testcases.TC_002_RegistrationFunction)  Time elapsed: 6.804 sec  <<< FAILURE!
-java.lang.AssertionError: Registration Unsuccessful... expected [https://www.surveymonkey.com/profile/default/?joined=1] but found [https://www.surveymonkey.com/user/sign-up/]
-	at org.automation.assignment.testcases.TC_002_RegistrationFunction.tc_002_registration_functionality(TC_002_RegistrationFunction.java:23)
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 5, Time elapsed: 0.703 sec <<< FAILURE! - in TestSuite
+startBrowser(org.automation.assignment.testcases.TC_001_ValidateLoginFunctionality)  Time elapsed: 0.593 sec  <<< FAILURE!
+java.lang.NullPointerException
 
